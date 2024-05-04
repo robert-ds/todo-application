@@ -39,8 +39,9 @@ function createTaskElement(task) {
 	taskCheckBox.type 		= 'checkbox';
 	taskCheckBox.checked 	= task.isCompleted;
 
+
 	taskCheckBox.addEventListener('change', () => {
-		task.isCompleted = taskCheckbox.checked;
+		task.isCompleted = taskCheckBox.checked;
 		taskText.classList.toggle("completed", task.isCompleted);
 		saveTasksToLocalStorage(app.tasks);
 	});
@@ -80,17 +81,17 @@ function saveTasksToLocalStorage(tasks) {
 
 window.onload = () => {
 	const savedTasks = JSON.parse(localStorage.getItem('tasks') || []);
-	app.tasks = savedTasks.map((task => {
+	app.tasks = savedTasks.map((task) => {
 		return createTask(task.title, task.isCompleted);
-	}));
+	});
 
 	app.tasks.forEach((task) => {
 		return addTaskToList(task, app.tasksList);
-	})
+	});
 };
 
 addTaskButton.addEventListener('click', () => {
-	alert("save");
+	// alert("save");
 	addTask(app);
 });
 

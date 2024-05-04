@@ -11,18 +11,18 @@
  	font-weight: 400;
  	line-height: 1.5;
  	color: #333;
- 	margin: 1rem;
  }
 
  h1 {
  	text-align: center;
  	font-size: 3rem;
- 	color: darkorange;
+ 	color: darkgreen;
  }
 
  .container {
  	margin: 0	 auto;
- 	height: 90vh;
+ 	width: 90%;
+ 	height: 90%;
  }
 
  input, button {
@@ -31,6 +31,11 @@
  	border: none;
  	border-radius: 4px;
  	outline: none;
+ 	margin: 5px 5px;
+ }
+
+ input {
+ 	border: 1px solid darkgreen;
  }
 
  button {
@@ -42,19 +47,30 @@
  ul {
  	list-style: none;
  	padding: 0;
+ 	margin-top: 15px;
  }
 
  li {
- 	background-color: #fff;
+ 	background-color: lightgreen;
  	display: flex;
  	align-items: center;
- 	justify-content: flex-start;
+ 	justify-content: space-between;
  	margin-bottom: 10px;
  	padding: 10px;
  	border-radius: 4px;
  }
 
+ li span {
+ 	color: darkgreen;
+ 	font-weight: bold;
+ 	margin: 8px;
+ }
+
  .completed {
  	text-decoration: line-through;
+ }
+
+ .delete-button {
+ 	float: right;
  }
 
